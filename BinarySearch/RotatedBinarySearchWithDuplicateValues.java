@@ -5,7 +5,7 @@ public class RotatedBinarySearchWithDuplicateValues {
         System.out.println(pivot(new int[]{7,7,7,7,1,2,3}));
 
     }
-    public static int pivot(int[] arr){
+   public static int pivot(int[] arr){
         int start=0;
         int end=arr.length-1;
         while (start<=end){
@@ -26,7 +26,7 @@ public class RotatedBinarySearchWithDuplicateValues {
                 }
                 end--;
             }
-            if (arr[start]<arr[mid]|| arr[start]==arr[mid]&& arr[mid]>arr[end]){
+            if (arr[start]<=arr[mid]){
                 start=mid+1;
             }else {
                 end=mid-1;
